@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class= "rectangle"> </div>
+<h1> <strong> DailyGlow </strong> <h1>
+<div class= "image">
+    <img src="{{ url_for('static', filename='rubber-duck.png') }}" alt="Duck"
+        width="410" height="390"/>
+</div>
+<a href="/login">
+    <button> Welcome </button>
+</a>
+{% endblock %}

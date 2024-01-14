@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet"  href="/static/LogSign.css">
+    </head>
+    <body>
+        <div class= "login-box">
+            <h1>Log in</h1>
+            <form method="post" action="/login">
+                <label>Email</label>
+                <input name="email" type= "email" placeholder="Enter your email here">
+                <label>Password</label>
+                <input name="password" type= "password" placeholder="Enter your password here">
+                <input type= "submit" value= "Submit">
+                {% for whatever in error %}
+                <label class="password_error"> Email and password do not match</label>
+                {% endfor %}
+            </form>
+            <p>Do not have an account? <a href= "/signup"> Sign up Here</a></p>
+        </div>
+    </body>
+</html>

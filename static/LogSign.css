@@ -1,0 +1,87 @@
+body{
+    background-color: #bcbcf2; 
+    font-family: 'Roboto', sans-serif; 
+}
+ .signupbox{
+     width: 500px;
+     height: 680px;
+     margin:  auto;
+     background-color: #E6E6FA ;
+     border-radius: 15px ;
+     margin-top: 70px; 
+     
+ }
+ .login-box{
+    width:500px;
+    height:360px; 
+    margin:auto;
+    border-radius:15px;
+    background-color: #E6E6FA; 
+    margin-top: 205px; 
+    
+ }
+ h1{
+    text-align:  center;
+    padding-top: 15px; 
+    font-family: "Roboto Mono", serif;;
+ }
+ h4 {
+    text-align: center;
+    font-family: "Roboto Mono", serif;
+ }
+ form {
+    width: 300px;
+    margin-left: 85px;
+ }
+
+ form label {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 18px; 
+    font-family: "Roboto Mono", serif;
+ }
+ form input{
+    width: 100%;
+    padding: 15px;
+    border: 1px;
+    border-radius: 20px; 
+    font-family: "Roboto Mono", serif;
+    border: 1px solid black;
+    text-align:  center;
+    font-size: 15px;
+ }
+ input[type="button"]{
+    width: 330px; 
+    height:45px; 
+    margin-top: 30px; 
+    background-color: #F2F2BC;
+    border-radius: 20px;
+    font-family: "Roboto Mono", serif;
+    border: 1px solid black;
+    font-size: 15px;
+ }
+
+ input[type="submit"]{
+    width: 330px; 
+    height:45px; 
+    margin-top: 30px; 
+    background-color: #F2F2BC;
+    border-radius: 20px;
+    font-family: "Roboto Mono", serif;
+    border: 1px solid black;
+    font-size: 15px;
+ }
+ p{
+   text-align: center;
+   padding-top:10px; 
+   font-size:15px; 
+   font-family: "Roboto Mono", serif; 
+   margin-top: 20px; 
+ }
+
+ .password_error{
+   color: red;
+   font-size: 10px;
+ }

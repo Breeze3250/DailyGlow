@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class="rectangle"> </div>
+<h1> Welcome, {{first_name}} <h1>
+<h2> Let's get started </h2>
+<form method="post", action="/end_session">
+    <button type="submit" class="logout">Sign out</button>
+</form>
+<div class="mini-duck">
+    <img src="{{ url_for('static', filename='rubber-duck.png') }}" alt="Duck"
+    width="311" height="290"/>
+</div>
+
+<div class="buttons">
+    <a href='/showers'>
+        <button> Showers </button>
+    </a>
+</div>
+
+<div class="buttons">
+    <a href="/face-wash">
+        <button class="face"> Face Wash </button>
+    </a>
+</div>
+{% endblock %}

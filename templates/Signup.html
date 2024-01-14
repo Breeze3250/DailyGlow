@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sign Up</title>
+        <link rel="stylesheet"  href="/static/LogSign.css">
+    </head>
+    <body>
+
+    </div>
+    <!-- Creating the sign up box -->
+        <div class= "signupbox">
+            <h1>Sign Up</h1>
+            <h4>It's free and only takes a minute</h4>
+            <form method="post" action="/signup">
+                <script src="/static/app.js"></script>
+                <label>First Name</label>
+                <input name="first_name" type="text" placeholder="Enter your first name here">
+                <label>Last Name</label>
+                <input name="last_name" type="text" placeholder="Enter your last name here">
+                <label>Email Address</label>
+                <input name="email" type="email" placeholder="Enter your email here">
+                <span>
+                    <label>Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter your password here">
+                    <label>Confirm Password</label>
+                    <input id="confirmpassword" type="password" placeholder="Confirm your password here" onkeyup="validate_password()">
+                </span>
+                <span id="wrong_pass_alert"></span>
+                <input type="submit" id="create" class="submit_btn" value="Submit">
+            </form>
+        </div>
+        <p>Already have an account? <a href="/login"> Login</a></p>
+    </body>
+</html>

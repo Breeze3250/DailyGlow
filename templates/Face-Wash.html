@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class= "rectangle"> </div>
+<a href="/get-started">
+    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="black" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
+</a>
+<h1> Face Wash  <h1>
+<div class= "mini-duck">
+    <img src="{{ url_for('static', filename='face.png') }}" alt="face"
+    width="300" height="300"/>
+</div>
+
+<div class="shower_reminders">
+    <script src="/static/app.js"></script>
+    {% for datetime in face_datetimes %}
+    <div class="big_reminder">
+        <button class="to-do" onclick="extend(this)">
+            <span class="day">
+                {{datetime.strftime('%A')}} {{datetime.strftime('%b')}}&nbsp;{{make_ordinal(datetime.strftime('%d'))}} 
+            </span>
+            <span>
+                {{datetime.strftime('%I:%M:%p')}}
+            </span>
+        </button>
+        <div class="hide">
+            <div class="small_text" id="small_text">
+                Completed?
+            </div>
+            <div class = "yes_no">
+                <button class="red_button">
+                    Yes
+                </button>
+                <button class="red_button" onclick="extend(this)">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <a href="/reminders/face-wash">
+        <button class="reminder">
+            <div class="line-1"> </div>
+            <div class="line-2"> </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;Add a reminder
+        </button>
+    </a>
+</div>
+{% endblock %}

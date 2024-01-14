@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body%}
+<div class= "rectangle"> </div>
+<h3> Reminders <h3>
+<form method="post" class="container" action="/reminders/{{path}}">
+    <div>
+        <input type="date" class="date" id="date" name="date">
+    </div>
+    <div>
+        <input type="time" class="time" id="time" name="time">
+    </div>
+    <a href="/{{path}}">
+        <button type="button" class="cancel">
+            CANCEL
+        </button>
+    </a>
+    <input type="submit" value="OK" class="ok">
+</form>
+{% endblock %}
