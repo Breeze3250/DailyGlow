@@ -118,7 +118,7 @@ def shower():
 @app.route("/face-wash")
 def face():
     face_reminder = Query()
-    face_reminders = db.search((face_reminder.type == "face-wash" & (shower_reminder.email == session['email'])))
+    face_reminders = db.search((face_reminder.type == "face-wash") & (face_reminder.email == session['email']))
     face_datetimes = lst_convert(face_reminders)
     return render_template("Face-Wash.html", face_datetimes=face_datetimes)
 

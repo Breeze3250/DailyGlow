@@ -16,7 +16,7 @@
 <div class="shower_reminders">
     <script src="/static/app.js"></script>
     {% for datetime in face_datetimes %}
-    <div class="big_reminder">
+    <div class="big_reminder" id="{{loop.index}}">
         <button class="to-do" onclick="extend(this)">
             <span class="day">
                 {{datetime.strftime('%A')}} {{datetime.strftime('%b')}}&nbsp;{{make_ordinal(datetime.strftime('%d'))}} 
@@ -29,11 +29,11 @@
             <div class="small_text" id="small_text">
                 Completed?
             </div>
-            <div class = "yes_no">
-                <button class="red_button">
+            <div class="yes_no">
+                <button class="red_button" onclick="remove({{loop.index}}, {{datetime.timestamp()}}, 'face-wash')">
                     Yes
                 </button>
-                <button class="red_button" onclick="extend(this)">
+                <button class="red_button" onclick="unextend(this)">
                     No
                 </button>
             </div>
