@@ -45,7 +45,7 @@ def validate(email, password):
 @app.before_request
 def load_user():
     if "email" not in session:
-        if not (request.path.startswith('/login') or request.path.startswith('/signup') or request.path.startswith('/static')):
+        if not (request.path.startswith('/login') or request.path.startswith('/signup') or request.path.startswith('/static') or request.path == "/"):
             return redirect("/login")
         else:
             g.first_name = None
